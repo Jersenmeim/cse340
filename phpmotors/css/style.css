@@ -1,0 +1,227 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(../images/site/checkerboard.jpg);
+}
+
+.bg {
+  background-color: white;
+  border: 8px solid #4c96d7;
+}
+
+.bg header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bg header div {
+  margin: 2%;
+}
+
+.bg header a {
+  position: relative;
+  top: .5em;
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.bg nav {
+  background-color: #3a3a3a;
+  text-align: left;
+}
+
+.bg nav ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 10px;
+}
+
+.bg nav ul li a {
+  padding: 10px 0;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.bg nav ul li:hover {
+  background-color: #4c96d7;
+}
+
+.bg nav ul li:hover a {
+  color: #3a3a3a;
+}
+
+.bg main {
+  background-image: url(../images/delorean.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 2%;
+  height: 100vh;
+}
+
+.bg main .heading p {
+  color: #4c96d7;
+  margin: -1px;
+}
+
+.bg main .heading p:first-child {
+  font-weight: bolder;
+}
+
+.bg main .button {
+  margin: 15px 0;
+  background-color: #4c96d7;
+  border: 1px solid black;
+  padding: 10px;
+  width: 10%;
+}
+
+.bg main .button a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
+.bg .sub-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bg .sub-content .upgrades {
+  width: 30%;
+  margin-bottom: 100px;
+}
+
+.bg .sub-content .upgrades .grid2x2 {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bg .sub-content .upgrades .grid2x2 .box {
+  margin: 10px;
+  background-color: #4c96d7;
+  width: 170px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg .sub-content .upgrades .grid2x2 .box img {
+  width: 30%;
+  margin: auto;
+}
+
+.bg .sub-content .upgrades .grid2x2 .box a {
+  color: blue;
+  text-align: center;
+  background-color: white;
+}
+
+.bg .sub-content .reviews ul {
+  margin: 0;
+}
+
+.bg .sub-content .reviews ul li {
+  font-size: x-large;
+}
+
+.bg footer {
+  border-top: 2px solid #3a3a3a;
+  text-align: center;
+}
+
+.bg footer p {
+  margin: 2px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .bg header .myaccount {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .bg nav {
+    text-align: left;
+  }
+  .bg nav ul li {
+    margin-left: -18px;
+  }
+  .bg nav ul li a {
+    margin: auto;
+    font-size: 1em;
+  }
+  .bg main {
+    height: 70vh;
+  }
+  .bg main .button {
+    margin: 160px auto;
+    background-color: #4c96d7;
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+  }
+  .bg main .button a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+  }
+  .bg .sub-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 2%;
+  }
+  .bg .sub-content .upgrades {
+    width: auto;
+    margin-bottom: 0px;
+  }
+  .bg .sub-content .upgrades .grid2x2 .box {
+    margin: 1px;
+    background-color: #4c96d7;
+    width: 155px;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
