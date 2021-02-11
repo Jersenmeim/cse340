@@ -1,0 +1,9 @@
+.container-vehicles{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.bg form .container select{
+        padding: 2.5%;
+}

@@ -1,0 +1,32 @@
+--query1 (insert)
+
+INSERT INTO clients (clientEmail, clientFirstname, clientLastname, clientPassword, comment) VALUES ("tony@starkent.com", "Tony", "Stark", "Iam1ronM@n", "I am the real Ironman");
+
+--query2(update)
+
+UPDATE clients SET clientLevel = 3 WHERE clientEmail = "tony@starkent.com";
+
+--query3(modify)
+UPDATE inventory SET invDescription = replace(invDescription, 'small', 'spacious') WHERE invMake = "GM" AND invModel = "Hummer"; 
+
+--query4(innerjoin)
+SELECT classificationName, invModel
+FROM carclassification
+INNER JOIN inventory ON
+carclassification.classificationId = inventory.classificationId
+WHERE carclassification.classificationId = 1;
+
+--query5(delete)
+DELETE FROM inventory WHERE invMake = "Jeep" AND invModel = "Wrangler";
+
+--query6(CONCAT)
+UPDATE inventory
+SET invImage = CONCAT("/phpmotors",invImage);
+UPDATE inventory
+SET invThumbnail = CONCAT("/phpmotors", invThumbnail);
+
+
+
+
+
+INSERT INTO inventory (invModel, classificationId) VALUES ("tony@starkent.com", "1") 
