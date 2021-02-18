@@ -13,7 +13,7 @@
             <img src="../images/site/logo.png" alt="phpmotor_logo">
             <div class="myaccount" >
             <?php    
-                echo $account;
+                echo $maccount;
             ?>
             </div>
         </header>
@@ -35,12 +35,14 @@
 
                 <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname"  id="uname" required>
+                <input type="email" name="clientEmail" <?php if (isset($clientEmail)){echo "value='$clientEmail'";}?> required placeholder="Enter a valid email address">
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw"  id="psw" required>
+                
+                <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
+                <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
                 <button type="submit">Login</button>
+                <input type="hidden" name="action" value="Login">
                 <a href="?action=register-form">not a member yet?</a>
 
                 </div>

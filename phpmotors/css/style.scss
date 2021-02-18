@@ -41,6 +41,17 @@ body{
                margin: 8px 0;
            }
 
+           input:invalid {
+            background-color: #ffdddd;
+          }
+
+          input:required:invalid {
+            border-color: #c00000;
+          }
+
+           input:required:valid {
+            border:2px green solid;
+           }
           
 
            button{

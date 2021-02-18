@@ -48,6 +48,18 @@ body .bg .container-vehicles {
   margin: 8px 0;
 }
 
+.bg form .container input:invalid {
+  background-color: #ffdddd;
+}
+
+.bg form .container input:required:invalid {
+  border-color: #c00000;
+}
+
+.bg form .container input:required:valid {
+  border: 2px green solid;
+}
+
 .bg form .container button {
   padding: 2%;
   margin: 4px 0;

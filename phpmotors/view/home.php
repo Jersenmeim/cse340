@@ -11,7 +11,8 @@
         <header>
             <img src="./images/site/logo.png" alt="phpmotor_logo">
             <div class="myaccount" >
-                <?php    
+                <?php  
+                
                     echo $account;
                 ?>
             </div>
