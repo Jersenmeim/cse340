@@ -40,13 +40,7 @@
             </div>
         </header>
 
-        <nav>
-            <?php    
-                
-                echo $navList;
-                
-            ?>
-        </nav>
+        <nav><?php echo $navList; ?></nav>
         <div class="container-vehicles">
             <a href="?action=return">Management Menu</a> 
         </div>
@@ -80,7 +74,7 @@
                 <label>Price</label>
                 <input type='number'  step="1" min="0" name="invPrice" id="prname" <?php if (isset($invPrice)){echo "value='$invPrice'";}?> required>
                 <label>Color</label>
-                <input type="text" name="invColor" id="coname" <?php if (isset($invColor)){echo "value='$invColor'";}?> required>
+                <input type="text" name="invColor" id="coname" pattern="[^0-9]*" <?php if (isset($invColor)){echo "value='$invColor'";}?> required>
                 <label>Stocks left?</label>
                 <input type="number"  min="0" name="invStock" id="stockname" <?php if (isset($invStock)){echo "value='$invStock'";}?> required>
                 

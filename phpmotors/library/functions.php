@@ -18,8 +18,7 @@ function navBarPopulate($classifications) {
       foreach ($classifications as $classification) {
        $navList .= "<li><a href='../index.php?action=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
       }
-   
-      
+      $navList .= '</ul>';
       return $navList;
    }
 
@@ -30,7 +29,8 @@ function navBarPopulate($classifications) {
       <a href="./index.php?action="  title="View the PHP Motors home page">Home</a></li>';
       foreach ($classifications as $classification) {
        $navList .= "<li><a href='./index.php?action=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
-      }
+      };
+      $navList .= '</ul>';
       return $navList;
 
       }
