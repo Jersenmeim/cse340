@@ -6,6 +6,7 @@ body{
     background-image: url(../images/site/checkerboard.jpg);
 
     .bg{
+       
         .container-vehicles{
             display: flex;
          
@@ -13,14 +14,26 @@ body{
             margin: 10px;
         
         }
+        .admin{
+           
+            padding: 2%;
+        }
     }
 }
 
+body{
 .bg{
+    #welcome{
+        text-align: center;
+        margin: 1em auto;
+        display: block;
+    }
+
+ 
     background-color: white;
  
     border: 8px solid #4c96d7;
-
+   
     
     form{
         margin: 2%;
@@ -70,15 +83,20 @@ body{
     }
         
 
-
+        #welcome{
+            text-align: center;
+            margin: 1em auto;
+            display: block;
+        }
     header{
         
         display: flex;
         justify-content: space-between;
-        div{
+        span{
             margin: 2%;
         }
-        a{
+        #acctLink{
+            margin: 2%;
             position: relative;
             top: .5em;
             text-decoration: none;
@@ -226,7 +244,7 @@ body{
             margin: 2px;
         }
     }
-    
+} 
 }
 
 @media only screen 

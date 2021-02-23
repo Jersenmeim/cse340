@@ -9,9 +9,8 @@
 </head>
 <body>
     <div class="bg">
-        <header>
-            <img src="../images/site/logo.png" alt="phpmotor_logo">
-            <div class="myaccount"><?php echo $account;?></div>
+    <header>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/cse340/phpmotors/snippets/header.php'; ?>
         </header>
 
         <nav>

@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/cse340/phpmotors/css/style.css">
     
 </head>
 <body>
     <div class="bg">
+        
         <header>
-            <img src="../images/site/logo.png" alt="phpmotor_logo">
-            <div class="myaccount" >
-            <?php    
-                echo $maccount;
-            ?>
-            </div>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/cse340/phpmotors/snippets/header.php'; ?>
         </header>
 
         <nav>
@@ -27,15 +23,15 @@
         </nav>
 
         <?php
-        if (isset($message)) {
-        echo $message;
-        }
+            if (isset($_SESSION['message'])) {
+                echo $_SESSION['message'];
+            }
         ?>
-            <form action="#">
+            <form method="post" action="/cse340/phpmotors/accounts/">
 
                 <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="email" name="clientEmail" <?php if (isset($clientEmail)){echo "value='$clientEmail'";}?> required placeholder="Enter a valid email address">
+                <label for="clientEmail"><b>Username</b></label>
+                <input type="email" name="clientEmail" id = "clientEmail" <?php if (isset($clientEmail)){echo "value='$clientEmail'";}?> required placeholder="Enter a valid email address">
 
                 
                 <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
@@ -56,7 +52,8 @@
         
     </div>
    
-    <script src="../js/script.js"></script>
+    <script src="/cse340/phpmotors/js/script.js"></script>
+   
 </body>
 
 </html>

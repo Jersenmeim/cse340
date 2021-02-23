@@ -17,16 +17,26 @@ body .bg .container-vehicles {
   margin: 10px;
 }
 
-.bg {
+body .bg .admin {
+  padding: 2%;
+}
+
+body .bg {
   background-color: white;
   border: 8px solid #4c96d7;
 }
 
-.bg form {
+body .bg #welcome {
+  text-align: center;
+  margin: 1em auto;
+  display: block;
+}
+
+body .bg form {
   margin: 2%;
 }
 
-.bg form .container {
+body .bg form .container {
   padding: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,28 +49,28 @@ body .bg .container-vehicles {
   background-color: #d2d2d2;
 }
 
-.bg form .container label {
+body .bg form .container label {
   color: #000000;
 }
 
-.bg form .container input {
+body .bg form .container input {
   padding: 2%;
   margin: 8px 0;
 }
 
-.bg form .container input:invalid {
+body .bg form .container input:invalid {
   background-color: #ffdddd;
 }
 
-.bg form .container input:required:invalid {
+body .bg form .container input:required:invalid {
   border-color: #c00000;
 }
 
-.bg form .container input:required:valid {
+body .bg form .container input:required:valid {
   border: 2px green solid;
 }
 
-.bg form .container button {
+body .bg form .container button {
   padding: 2%;
   margin: 4px 0;
   border: none;
@@ -68,11 +78,17 @@ body .bg .container-vehicles {
   color: white;
 }
 
-.bg form .container button:hover {
+body .bg form .container button:hover {
   background-color: yellowgreen;
 }
 
-.bg header {
+body .bg #welcome {
+  text-align: center;
+  margin: 1em auto;
+  display: block;
+}
+
+body .bg header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,44 +97,45 @@ body .bg .container-vehicles {
           justify-content: space-between;
 }
 
-.bg header div {
+body .bg header span {
   margin: 2%;
 }
 
-.bg header a {
+body .bg header #acctLink {
+  margin: 2%;
   position: relative;
   top: .5em;
   text-decoration: none;
   color: #3a3a3a;
 }
 
-.bg nav {
+body .bg nav {
   background-color: #3a3a3a;
   text-align: left;
 }
 
-.bg nav ul li {
+body .bg nav ul li {
   list-style-type: none;
   display: inline;
   padding: 10px;
 }
 
-.bg nav ul li a {
+body .bg nav ul li a {
   padding: 10px 0;
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
 }
 
-.bg nav ul li:hover {
+body .bg nav ul li:hover {
   background-color: #4c96d7;
 }
 
-.bg nav ul li:hover a {
+body .bg nav ul li:hover a {
   color: #3a3a3a;
 }
 
-.bg .container-vehicles {
+body .bg .container-vehicles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,7 +146,7 @@ body .bg .container-vehicles {
   margin: 10px;
 }
 
-.bg main {
+body .bg main {
   background-image: url(../images/delorean.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -138,16 +155,16 @@ body .bg .container-vehicles {
   height: 100vh;
 }
 
-.bg main .heading p {
+body .bg main .heading p {
   color: #4c96d7;
   margin: -1px;
 }
 
-.bg main .heading p:first-child {
+body .bg main .heading p:first-child {
   font-weight: bolder;
 }
 
-.bg main .button {
+body .bg main .button {
   margin: 15px 0;
   background-color: #4c96d7;
   border: 1px solid black;
@@ -155,14 +172,14 @@ body .bg .container-vehicles {
   width: 10%;
 }
 
-.bg main .button a {
+body .bg main .button a {
   margin: 10px;
   text-decoration: none;
   color: black;
   font-size: 1.2em;
 }
 
-.bg .sub-content {
+body .bg .sub-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,12 +188,12 @@ body .bg .container-vehicles {
           justify-content: space-evenly;
 }
 
-.bg .sub-content .upgrades {
+body .bg .sub-content .upgrades {
   width: 30%;
   margin-bottom: 100px;
 }
 
-.bg .sub-content .upgrades .grid2x2 {
+body .bg .sub-content .upgrades .grid2x2 {
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,7 +206,7 @@ body .bg .container-vehicles {
           flex-direction: row;
 }
 
-.bg .sub-content .upgrades .grid2x2 .box {
+body .bg .sub-content .upgrades .grid2x2 .box {
   margin: 10px;
   background-color: #4c96d7;
   width: 170px;
@@ -203,31 +220,31 @@ body .bg .container-vehicles {
           flex-direction: column;
 }
 
-.bg .sub-content .upgrades .grid2x2 .box img {
+body .bg .sub-content .upgrades .grid2x2 .box img {
   width: 30%;
   margin: auto;
 }
 
-.bg .sub-content .upgrades .grid2x2 .box a {
+body .bg .sub-content .upgrades .grid2x2 .box a {
   color: blue;
   text-align: center;
   background-color: white;
 }
 
-.bg .sub-content .reviews ul {
+body .bg .sub-content .reviews ul {
   margin: 0;
 }
 
-.bg .sub-content .reviews ul li {
+body .bg .sub-content .reviews ul li {
   font-size: x-large;
 }
 
-.bg footer {
+body .bg footer {
   border-top: 2px solid #3a3a3a;
   text-align: center;
 }
 
-.bg footer p {
+body .bg footer p {
   margin: 2px;
 }
 

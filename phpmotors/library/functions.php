@@ -1,8 +1,8 @@
 
 
 <?php
-$account = '<a href="../phpmotors/accounts/index.php?action=login-form">My Account</a>';
-$maccount = '<a href="../accounts/index.php?action=login-form">My Account</a>';
+
+
 
 // Build the navigation option list
 
@@ -13,7 +13,9 @@ function navBarPopulate($classifications) {
    
    function nav1($classifications){
       $navList = '<ul>';
+      
       $navList .= '<li>
+      
       <a href="../index.php?action="  title="View the PHP Motors home page">Home</a></li>';
       foreach ($classifications as $classification) {
        $navList .= "<li><a href='../index.php?action=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";

@@ -30,14 +30,7 @@
 <body>
     <div class="bg">
     <header>
-            <img src="../images/site/logo.png" alt="phpmotor_logo">
-            <div class="myaccount" >
-                
-            <?php    
-                echo $account;
-                
-            ?>
-            </div>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/cse340/phpmotors/snippets/header.php'; ?>
         </header>
 
         <nav><?php echo $navList; ?></nav>

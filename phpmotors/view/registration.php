@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"  href="/cse340/phpmotors/css/style.css">
 </head>
 <body>
     <div class="bg">
+        
         <header>
-            <img src="../images/site/logo.png" alt="phpmotor_logo">
-            <div class="myaccount"><a href="?action=login-page">My Account</a></div>
+            <?php require $_SERVER['DOCUMENT_ROOT'].'/cse340/phpmotors/snippets/header.php'; ?>
         </header>
 
         <nav>
@@ -26,7 +26,7 @@
         }
         ?>
 
-        <form method="post" action="../accounts/index.php">
+        <form method="post" action="../index.php">
         <div class="container">
             <label>First Name</label>
             <input type="text" name="clientFirstname" id="fname"  <?php if (isset($clientFirstname)){echo "value='$clientFirstname'";}?> required>

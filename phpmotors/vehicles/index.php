@@ -1,6 +1,7 @@
 <?php
 
-
+       //Session Creation
+       session_start();
 
       // Get the database connection file
       require_once '../library/connections.php';
@@ -15,6 +16,8 @@
       $classifications = getClassifications();
       //build navbar list
       $navList = navBarPopulate($classifications).nav1($classifications);
+
+    
 
       $action = filter_input(INPUT_POST, 'action' , FILTER_SANITIZE_STRING);
       if ($action == NULL){
@@ -124,7 +127,23 @@
         break;
 
         default:
-        include '../view/vehicle-man.php';
+          if(isset($_SESSION['loggedin']))
+            {
+              if ($_SESSION['loggedin'] === TRUE) 
+                {
+                  if($_SESSION['clientData']['clientLevel'] > 1)
+                  {
+                    include '../view/vehicle-man.php';
+                  }
+                  else {header('Location: /cse340/phpmotors');}
+                }
+              
+              
+            } 
+              
+            
+            else {header('Location: /cse340/phpmotors');
+          }
         break;
         }
 ?>
