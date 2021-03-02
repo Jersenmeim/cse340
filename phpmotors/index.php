@@ -14,7 +14,7 @@
       // get the classifications
       $classifications = getClassifications();
       //populate navbar
-      $navList = navBarPopulate($classifications).nav2($classifications);
+      $navList = navBarPopulate($classifications);
   
 
       $action = filter_input(INPUT_POST, 'action');

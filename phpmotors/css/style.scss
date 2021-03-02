@@ -23,6 +23,9 @@ body{
 
 body{
 .bg{
+    h1,.delete{
+        margin: 2%;
+    }
     #welcome{
         text-align: center;
         margin: 1em auto;
@@ -142,8 +145,15 @@ body{
         flex-direction: column;
         margin: 10px;
 
+        #classificationList{
+            width: 15%;
+        }
+
     }
     
+    #inventoryDisplay{
+        padding: 1%;
+    }
 
     main{
         background-image: url(../images/delorean.jpg);

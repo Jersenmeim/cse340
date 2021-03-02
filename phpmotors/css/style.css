@@ -26,6 +26,10 @@ body .bg {
   border: 8px solid #4c96d7;
 }
 
+body .bg h1, body .bg .delete {
+  margin: 2%;
+}
+
 body .bg #welcome {
   text-align: center;
   margin: 1em auto;
@@ -144,6 +148,14 @@ body .bg .container-vehicles {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px;
+}
+
+body .bg .container-vehicles #classificationList {
+  width: 15%;
+}
+
+body .bg #inventoryDisplay {
+  padding: 1%;
 }
 
 body .bg main {
