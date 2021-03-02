@@ -30,6 +30,10 @@ body .bg h1, body .bg .delete {
   margin: 2%;
 }
 
+body .bg .welcome {
+  margin: 1% 0;
+}
+
 body .bg #welcome {
   text-align: center;
   margin: 1em auto;
