@@ -16,9 +16,7 @@
 
         <nav>
             <?php    
-                
                 echo $navList;
-                
             ?>
         </nav>
 
@@ -47,7 +45,7 @@
             
 
             <?php    
-            include 'footer.php';
+                include 'footer.php';
             ?>
         
     </div>

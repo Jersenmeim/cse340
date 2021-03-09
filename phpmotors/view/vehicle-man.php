@@ -5,7 +5,7 @@
     }
     if (isset($_SESSION['message'])) {
         $message = $_SESSION['message'];
-       }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="bg">
-    <header>
+        <header>
             <?php require $_SERVER['DOCUMENT_ROOT'].'/cse340/phpmotors/snippets/header.php'; ?>
         </header>
 
@@ -33,15 +33,15 @@
             <a href="?action=add-vehicles">Add Vehicle</a> 
 
             <?php
-            if (isset($message)) { 
-            echo $message; 
-            } 
-            if (isset($classificationList)) { 
-            echo '<h2>Vehicles By Classification</h2>'; 
-            echo '<p>Choose a classification to see those vehicles</p>'; 
-            echo $classificationList; 
-            }
-        ?>
+                if (isset($message)) { 
+                echo $message; 
+                } 
+                if (isset($classificationList)) { 
+                echo '<h2>Vehicles By Classification</h2>'; 
+                echo '<p>Choose a classification to see those vehicles</p>'; 
+                echo $classificationList; 
+                }
+            ?>
         </div>
         
 
@@ -50,12 +50,9 @@
     </noscript>
 
     <table id="inventoryDisplay"></table>
-            
-
         <?php    
             include 'footer.php';
         ?>
-        
     </div>
     <script src="../js/inventory.js"></script>
     <script src="../js/script.js"></script>

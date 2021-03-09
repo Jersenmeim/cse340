@@ -29,19 +29,18 @@
             ?>
         </nav>
 
-
         <?php
         if (isset($message)) {
         echo $message;
         }
         ?>
 
-<h1>Update Account Information</h1>
+        <h1>Update Account Information</h1>
         <?php if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];} ?>
        
         <form method="post" action="/cse340/phpmotors/accounts/index.php">
-        <h2>Client Information</h2>
+            <h2>Client Information</h2>
             <div class="container">
                 <label>First Name</label><br>
                 <input required type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> ><br>
@@ -60,7 +59,7 @@
         <?php if (isset($_SESSION['message'])) {
             echo $_SESSION['message'];} ?> 
         <form method="post" action="/cse340/phpmotors/accounts/index.php">
-        <h2>Update Password</h2>
+            <h2>Update Password</h2>
             <div class="container">
                 <p>This change will update your password.</p>
                 <span>(Must be at least 8 characters and have 1 uppercase letter number and special character.)</span><br>
@@ -72,11 +71,10 @@
             </div>
         </form>
 
-            <?php    
+        <?php    
             include 'footer.php';
-            ?>
+        ?>
     </div>
-   
     <script src="../js/script.js"></script>
 </body>
 

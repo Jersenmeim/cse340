@@ -1,5 +1,5 @@
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -12,8 +12,8 @@ body .bg .container-vehicles {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 10px;
 }
 
@@ -26,7 +26,8 @@ body .bg {
   border: 8px solid #4c96d7;
 }
 
-body .bg h1, body .bg .delete {
+body .bg h1,
+body .bg .delete {
   margin: 2%;
 }
 
@@ -51,8 +52,8 @@ body .bg form .container {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 20%;
   background-color: #d2d2d2;
 }
@@ -101,8 +102,8 @@ body .bg header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 body .bg header span {
@@ -112,7 +113,7 @@ body .bg header span {
 body .bg header #acctLink {
   margin: 2%;
   position: relative;
-  top: .5em;
+  top: 0.5em;
   text-decoration: none;
   color: #3a3a3a;
 }
@@ -149,8 +150,8 @@ body .bg .container-vehicles {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 10px;
 }
 
@@ -200,8 +201,8 @@ body .bg .sub-content {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 body .bg .sub-content .upgrades {
@@ -215,11 +216,11 @@ body .bg .sub-content .upgrades .grid2x2 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 body .bg .sub-content .upgrades .grid2x2 .box {
@@ -232,8 +233,8 @@ body .bg .sub-content .upgrades .grid2x2 .box {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 body .bg .sub-content .upgrades .grid2x2 .box img {
@@ -272,8 +273,8 @@ body .bg footer p {
     display: flex;
     text-align: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .bg nav {
     text-align: left;
@@ -307,8 +308,8 @@ body .bg footer p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     padding: 2%;
   }
   .bg .sub-content .upgrades {

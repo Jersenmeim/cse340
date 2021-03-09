@@ -1,16 +1,13 @@
 <?php
- if(isset($_SESSION['loggedin']))
- {
-   if ($_SESSION['loggedin'] === TRUE) 
-     {
-        
-     }
-   
-   
- } 
- else {header('Location: /cse340/phpmotors');
-}
+    if(isset($_SESSION['loggedin'])){
+        if ($_SESSION['loggedin'] === TRUE) {
+
+        }
+    } 
+        else {header('Location: /cse340/phpmotors');
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,41 +25,34 @@
 
         <nav>
             <?php    
-                
                 echo $navList;
-                
             ?>
         </nav>
         <div class="admin">
-        <h2><?php echo $_SESSION['clientData']['clientFirstname']; ?></h2>
-        
-        <ul>
-            <li>First Name: <?php echo $_SESSION['clientData']['clientFirstname']; ?></li>
-            <li>Last Name: <?php echo $_SESSION['clientData']['clientLastname']; ?></li>
-            <li>Email: <?php echo $_SESSION['clientData']['clientEmail']; ?></li>
+            <h2><?php echo $_SESSION['clientData']['clientFirstname']; ?></h2>
             
-        </ul>
-        
-        
+            <ul>
+                <li>First Name: <?php echo $_SESSION['clientData']['clientFirstname']; ?></li>
+                <li>Last Name: <?php echo $_SESSION['clientData']['clientLastname']; ?></li>
+                <li>Email: <?php echo $_SESSION['clientData']['clientEmail']; ?></li>
+            </ul>
+            
+            
 
-        <?php if (($_SESSION['clientData']['clientLevel'] == 1) || ($_SESSION['clientData']['clientLevel'] == 3)) {echo '<h3>Account Management</h3>
-                                                        <p>Use this link to manage your account.</p>
-                                                        <p><a href="/cse340/phpmotors/accounts?action=update-page">Account Management</a></p>';} ?> 
-        <?php if ($_SESSION['clientData']['clientLevel'] > 1) {echo '<h3>Inventory Management</h3>
-                                                        <p>Use this link to manage the inventory.</p>
-                                                        <p><a href="/cse340/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
+            <?php if (($_SESSION['clientData']['clientLevel'] == 1) || ($_SESSION['clientData']['clientLevel'] == 3)) {echo '<h3>Account Management</h3>
+                                                            <p>Use this link to manage your account.</p>
+                                                            <p><a href="/cse340/phpmotors/accounts?action=update-page">Account Management</a></p>';} ?> 
+            <?php if ($_SESSION['clientData']['clientLevel'] > 1) {echo '<h3>Inventory Management</h3>
+                                                            <p>Use this link to manage the inventory.</p>
+                                                            <p><a href="/cse340/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
 
 
-        <p>You are logged in.</p>  
-        
+            <p>You are logged in.</p>  
         </div>
       
-          
-
-            <?php    
-            include 'footer.php';
-            ?>
-        
+        <?php    
+        include 'footer.php';
+        ?>
     </div>
    
     <script src="/cse340/phpmotors/js/script.js"></script>

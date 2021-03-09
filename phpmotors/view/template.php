@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +17,7 @@
 
         <nav>
             <?php    
-                
                 echo $navList;
-                
             ?>
         </nav>
        
