@@ -1,100 +1,22 @@
-* {
+*,
+*:before,
+*:after {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
-  background-image: url(../images/site/checkerboard.jpg);
-}
-
-body .bg .container-vehicles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 10px;
-}
-
-body .bg .admin {
-  padding: 2%;
+  background-image: url(/cse340/phpmotors/images/vehicles/site/checkerboard.jpg);
 }
 
 body .bg {
+  margin: 2%;
+  padding: 2%;
   background-color: white;
   border: 8px solid #4c96d7;
-}
-
-body .bg h1,
-body .bg .delete {
-  margin: 2%;
-}
-
-body .bg .welcome {
-  margin: 1% 0;
-}
-
-body .bg #welcome {
-  text-align: center;
-  margin: 1em auto;
-  display: block;
-}
-
-body .bg form {
-  margin: 2%;
-}
-
-body .bg form .container {
-  padding: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 20%;
-  background-color: #d2d2d2;
-}
-
-body .bg form .container label {
-  color: #000000;
-}
-
-body .bg form .container input {
-  padding: 2%;
-  margin: 8px 0;
-}
-
-body .bg form .container input:invalid {
-  background-color: #ffdddd;
-}
-
-body .bg form .container input:required:invalid {
-  border-color: #c00000;
-}
-
-body .bg form .container input:required:valid {
-  border: 2px green solid;
-}
-
-body .bg form .container button {
-  padding: 2%;
-  margin: 4px 0;
-  border: none;
-  background-color: black;
-  color: white;
-}
-
-body .bg form .container button:hover {
-  background-color: yellowgreen;
-}
-
-body .bg #welcome {
-  text-align: center;
-  margin: 1em auto;
-  display: block;
 }
 
 body .bg header {
@@ -102,31 +24,32 @@ body .bg header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-body .bg header span {
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 2%;
 }
 
-body .bg header #acctLink {
-  margin: 2%;
-  position: relative;
-  top: 0.5em;
-  text-decoration: none;
-  color: #3a3a3a;
+body .bg .newClassName {
+  display: block;
 }
 
-body .bg nav {
+body .bg nav ul {
   background-color: #3a3a3a;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bg nav ul li:first-child {
+  display: none;
+  cursor: pointer;
 }
 
 body .bg nav ul li {
   list-style-type: none;
   display: inline;
-  padding: 10px;
+  padding: 0 8px;
 }
 
 body .bg nav ul li a {
@@ -144,69 +67,148 @@ body .bg nav ul li:hover a {
   color: #3a3a3a;
 }
 
+body .bg .notice {
+  margin: 0 -9px;
+  color: red;
+}
+
 body .bg .container-vehicles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 10px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
 }
 
-body .bg .container-vehicles #classificationList {
-  width: 15%;
+body .bg .container-vehicles a,
+body .bg .container-vehicles h2,
+body .bg .container-vehicles p,
+body .bg .container-vehicles select {
+  margin: 2px -9px;
 }
 
-body .bg #inventoryDisplay {
-  padding: 1%;
+body .bg .container-vehicles select {
+  padding: 8px;
+  width: 20%;
 }
 
-body .bg main {
-  background-image: url(../images/delorean.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  padding: 2%;
-  height: 100vh;
+body .bg #inventoryDisplay thead tr th {
+  margin: 2px -1px;
+  display: table;
 }
 
-body .bg main .heading p {
-  color: #4c96d7;
+body .bg form .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+body .bg form .container input,
+body .bg form .container select {
+  padding: 6px;
+  margin: 10px 0;
+}
+
+body .bg form .container button,
+body .bg form .container #regbtn {
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+body .bg .delorean {
   margin: -1px;
 }
 
-body .bg main .heading p:first-child {
+body .bg .delorean img {
+  width: 100%;
+}
+
+body .bg .heading {
+  font-size: larger;
+}
+
+body .bg .heading p {
+  color: #4c96d7;
+  margin: 0px;
+}
+
+body .bg .heading p:first-child {
   font-weight: bolder;
 }
 
-body .bg main .button {
-  margin: 15px 0;
+body .bg #inv-display {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .bg #inv-display li {
+  list-style-type: none;
+  border: 1px black solid;
+  width: 20%;
+}
+
+body .bg #inv-display li div {
+  height: 180px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .bg #inv-display li div img {
+  width: 100%;
+}
+
+body .bg #inv-display li .container {
+  padding: 2px 16px;
+}
+
+body .bg .vehicle-details {
+  width: 50%;
+}
+
+body .bg .vehicle-details img {
+  width: 100%;
+}
+
+body .bg .button {
+  margin: 30px 0;
   background-color: #4c96d7;
   border: 1px solid black;
   padding: 10px;
-  width: 10%;
+  width: 96px;
 }
 
-body .bg main .button a {
-  margin: 10px;
+body .bg .button a {
   text-decoration: none;
   color: black;
   font-size: 1.2em;
+  text-align: center;
 }
 
 body .bg .sub-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2%;
 }
 
 body .bg .sub-content .upgrades {
-  width: 30%;
+  width: 100%;
   margin-bottom: 100px;
 }
 
@@ -216,25 +218,28 @@ body .bg .sub-content .upgrades .grid2x2 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 body .bg .sub-content .upgrades .grid2x2 .box {
   margin: 10px;
   background-color: #4c96d7;
-  width: 170px;
-  height: 100px;
+  width: 40%;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .bg .sub-content .upgrades .grid2x2 .box img {
@@ -248,11 +253,16 @@ body .bg .sub-content .upgrades .grid2x2 .box a {
   background-color: white;
 }
 
+body .bg .sub-content .reviews {
+  width: 100%;
+}
+
 body .bg .sub-content .reviews ul {
   margin: 0;
 }
 
 body .bg .sub-content .reviews ul li {
+  margin: 2% 0px 2% -14px;
   font-size: x-large;
 }
 
@@ -262,59 +272,144 @@ body .bg footer {
 }
 
 body .bg footer p {
-  margin: 2px;
+  margin: 10px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .bg .header .myaccount {
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+@media only screen and (max-width: 767px) {
+  body .bg header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
   }
-  .bg nav {
-    text-align: left;
-  }
-  .bg nav ul li {
-    margin-left: -18px;
-  }
-  .bg nav ul li a {
-    margin: auto;
-    font-size: 12px;
-  }
-  .bg main {
-    height: 60vh;
-  }
-  .bg main .button {
-    margin: 160px auto;
-    background-color: #4c96d7;
-    border: 1px solid black;
-    padding: 10px;
-    width: 30%;
-  }
-  .bg main .button a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 1em;
-  }
-  .bg .sub-content {
+  body .bg nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-    padding: 2%;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .bg .sub-content .upgrades {
-    width: auto;
-    margin-bottom: 0px;
+  body .bg nav ul li:first-child {
+    display: block;
+    font-weight: bolder;
+  }
+  body .bg nav ul li {
+    display: none;
+  }
+  body .bg nav ul li a {
+    text-align: left;
+  }
+  body .bg #inv-display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .bg #inv-display li {
+    width: 100%;
+  }
+  body .bg #inv-display li div {
+    height: 200px;
+    cursor: pointer;
+  }
+  body .bg #inv-display li div img {
+    width: 100%;
+  }
+  body .bg main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .bg .container-vehicles select {
+    padding: 8px;
+    padding: 2.5%;
+    width: 100%;
+  }
+  body .bg #inventoryDisplay thead tr th {
+    margin: 2px -1px;
+    display: table;
+  }
+  body .bg .vehicle-details {
+    width: 100%;
+  }
+  body .bg .vehicle-details img {
+    width: 100%;
+  }
+  body .bg form .container {
+    width: 100%;
+  }
+  body .bg .button {
+    width: 40%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+  }
+  body .bg .sub-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .bg .sub-content .upgrades {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body .bg .sub-content .upgrades .grid2x2 {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .bg .sub-content .upgrades .grid2x2 .box {
+    margin: 10px;
+    background-color: #4c96d7;
+    width: 40%;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .bg .sub-content .upgrades .grid2x2 .box img {
+    width: 30%;
+    margin: auto;
+  }
+  body .bg .sub-content .upgrades .grid2x2 .box a {
+    color: blue;
+    text-align: center;
+    background-color: white;
+  }
+  body .bg .sub-content .reviews {
+    width: 100%;
+  }
+  body .bg .sub-content .reviews ul {
+    margin: 0;
+  }
+  body .bg .sub-content .reviews ul li {
+    margin: 2% 0px 2% -14px;
+    font-size: medium;
   }
 }
 /*# sourceMappingURL=style.css.map */

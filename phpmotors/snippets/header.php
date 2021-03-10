@@ -1,4 +1,4 @@
-<img id="logo" src="/cse340/phpmotors/images/site/logo.png" alt="Company Logo">
+<img id="logo" src="/cse340/phpmotors/images/vehicles/site/logo.png" alt="Company Logo">
 
 <?php if(isset($_SESSION['loggedin'])){
 $cookieFirstname = $_SESSION['clientData']['clientFirstname'];

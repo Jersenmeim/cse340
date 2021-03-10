@@ -25,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Vehicle</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/vehicles.css">
 </head>
 <body>
     <div class="bg">
@@ -61,11 +60,11 @@
                 <label>Description</label>
                 <textarea name="invDescription" id="dcname" cols="30" rows="5" required><?php if (isset($invDescription)){echo "$invDescription";}?></textarea>
                 <label>Image</label>
-                <input type="text" name="invImage" id="imagefile" <?php if (isset($invImage)){echo "value='$invImage'";}?> value="/images/no-image.jpg" required>
-                <!-- value="/images/no-image.jpg" -->
+                <input type="text" name="invImage" id="imagefile" <?php if (isset($invImage)){echo "value='$invImage'";}?> value="/cse340/phpmotors/images/vehicles/no-image.png" required>
+                <!-- value="/cse340/phpmotors/images/vehicles/no-image.jpg" -->
                 <label>Thumbnail</label>
-                <input type="text" name="invThumbnail" id="thumbnailfile" value="/images/no-image.jpg" <?php if (isset($invThumbnail)){echo "value='$invThumbnail'";}?> required>
-                <!-- value="/images/no-image.jpg" -->
+                <input type="text" name="invThumbnail" id="thumbnailfile" value="/cse340/phpmotors/images/vehicles/no-image.png" <?php if (isset($invThumbnail)){echo "value='$invThumbnail'";}?> required>
+                <!-- value="/cse340/phpmotors/images/vehicles/no-image.jpg" -->
 
                 <label>Price</label>
                 <input type='number'  step="1" min="0" name="invPrice" id="prname" <?php if (isset($invPrice)){echo "value='$invPrice'";}?> required>

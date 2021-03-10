@@ -46,7 +46,7 @@
         ?>
     </div>
    
-    <script src="../js/script.js"></script>
+    <script src="/cse340/phpmotors/js/script.js"></script>
 </body>
 
 </html>

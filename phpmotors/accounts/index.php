@@ -115,7 +115,7 @@
         // Store the array into the session
         $_SESSION['clientData'] = $clientData;
         // Send them to the admin view
-        include '../view/admin.php';
+        header('location:/cse340/phpmotors/');
         exit;
     break;
 
@@ -144,7 +144,7 @@
 
         // Check for missing data
         if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail)){
-        $_SESSION['message'] = '<p>Please provide information for all empty form fields.</p>';
+        $_SESSION['message'] = '<p class="notice" >Please provide information for all empty form fields.</p>';
         include '../view/client-update.php';
         exit; 
         }
@@ -170,7 +170,7 @@
         header('Location: /cse340/phpmotors/accounts');
         exit;
         } else {
-        $_SESSION['message'] = "<p>Sorry $clientFirstname, but the update failed. Please try again.</p>";
+        $_SESSION['message'] = "<p class='notice' >Sorry $clientFirstname, but the update failed. Please try again.</p>";
         include '../view/client-update.php';
         exit;
         }
@@ -191,7 +191,7 @@
         header('Location: /cse340/phpmotors/accounts/?action=login-page');
         exit;
         } else {
-        $_SESSION['message'] = "<p>Sorry " . $_SESSION['clientData']['clientFirstname'] . ", but the update failed. Please try again.</p>";
+        $_SESSION['message'] = "<p class='notice'>Sorry " . $_SESSION['clientData']['clientFirstname'] . ", but the update failed. Please try again.</p>";
         include '../view/client-update.php';
         exit;
         }

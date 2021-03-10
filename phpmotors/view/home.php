@@ -27,9 +27,13 @@
                 <p>Superman doors</p>
                 <p>Fuzzy dice!</p>
             </div>
+            
             <div class="button">
                 <a href="#">Own Today</a>
             </div>
+            <div class="delorean">
+                <img src="./images/vehicles/delorean.jpg" alt="delorean">
+            </div>  
         </main>
         <div class="sub-content">
                 <div class="upgrades">
@@ -39,25 +43,25 @@
                     <div class="grid2x2">
                         <div class="box">
                            
-                                <img src="./images/upgrades/flux-cap.png" alt="Flux-cap">
+                                <img src="/cse340/phpmotors/images/vehicles/upgrades/flux-cap.png" alt="Flux-cap">
                                 <a href="#">Flux Capacitor</a>
                             
                         </div>
                         <div class="box">
                           
-                            <img src="./images/upgrades/flame.jpg" alt="Flame">
+                            <img src="/cse340/phpmotors/images/vehicles/upgrades/flame.jpg" alt="Flame">
                             <a href="#">Flame Decals</a>
                           
                         </div>
                         <div class="box">
                             
-                                <img src="./images/upgrades/bumper_sticker.jpg" alt="bumper_sticker">
+                                <img src="/cse340/phpmotors/images/vehicles/upgrades/bumper_sticker.jpg" alt="bumper_sticker">
                                 <a href="#">Bumper Stickers</a>
                             
                         </div>
                         <div class="box">
                             
-                                <img src="./images/upgrades/hub-cap.jpg" alt="hub-cap">
+                                <img src="/cse340/phpmotors/images/vehicles/upgrades/hub-cap.jpg" alt="hub-cap">
                                 <a href="#">Hub Caps</a>
                             
                         </div>

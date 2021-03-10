@@ -12,7 +12,6 @@
     <title><?php if(isset($invInfo['invMake'])){ 
 	echo "Delete $invInfo[invMake] $invInfo[invModel]";} ?> | PHP Motors</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/vehicles.css">
 </head>
 <body>
     <div class="bg">

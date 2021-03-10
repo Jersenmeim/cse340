@@ -9,7 +9,7 @@
 <body>
     <div class="bg">
     <header>
-            <img src="./images/site/logo.png" alt="phpmotor_logo">
+            <img src="./cse340/phpmotors/images/vehicles/site/logo.png" alt="phpmotor_logo">
             <div class="myaccount" >
                 <a href="?action=login-page">My Account</a>
             </div>

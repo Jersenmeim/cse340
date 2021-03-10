@@ -50,14 +50,11 @@
                 <input required type="email" name="clientEmail" id="email" <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?> ><br>
                 <input type="hidden" name="clientId" value="<?php if(isset($clientInfo['clientId'])){ echo $clientInfo['clientId'];} 
                                                             elseif(isset($clientId)){ echo $clientId; } ?>">
-                <input type="submit" name="submit" value="Update Info">
+                <input type="submit" name="submit" id="regbtn" value="Update Info">
                 <input type="hidden" name="action" value="updateClient">
             </div>
         </form>
         
-        
-        <?php if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];} ?> 
         <form method="post" action="/cse340/phpmotors/accounts/index.php">
             <h2>Update Password</h2>
             <div class="container">
@@ -66,7 +63,7 @@
                 <input required type="password" name="clientPassword" id="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"><br>
                 <input type="hidden" name="clientId" value="<?php if(isset($clientInfo['clientId'])){ echo $clientInfo['clientId'];} 
                                                             elseif(isset($clientId)){ echo $clientId; } ?>">
-                <input type="submit" name="submit" value="Update Password">
+                <input type="submit" name="submit" id="regbtn" value="Update Password">
                 <input type="hidden" name="action" value="updatePassword">
             </div>
         </form>
@@ -79,3 +76,4 @@
 </body>
 
 </html>
+<?php unset($_SESSION['message']); ?>

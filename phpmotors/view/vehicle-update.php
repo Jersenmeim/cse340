@@ -26,7 +26,6 @@
 	    elseif(isset($invMake) && isset($invModel)) { 
 		echo "Modify $invMake $invModel"; }?></title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/vehicles.css">
 </head>
 <body>
     <div class="bg">
@@ -70,11 +69,13 @@
                     <label>Description</label>
                     <textarea name="invDescription" id="invDescription" cols="30" rows="5" required><?php if(isset($invDescription)){ echo $invDescription; } elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; }?></textarea>
                     <label>Image</label>
-                    <input type="text" name="invImage" id="imagefile" <?php if (isset($invImage)){echo "value='$invImage'";}?> value="/images/no-image.jpg" required>
-                    <!-- value="/images/no-image.jpg" -->
+                    <input type="text" name="invImage" id="imagefile" <?php if (isset($invImage)){echo "value='$invImage'";}elseif(isset($invInfo['invImage'])) {echo "value='$invInfo[invImage]'"; }
+                    ?> required>
+                    <!-- value="/cse340/phpmotors/images/vehicles/no-image.jpg" -->
                     <label>Thumbnail</label>
-                    <input type="text" name="invThumbnail" id="thumbnailfile" value="/images/no-image.jpg" <?php if (isset($invThumbnail)){echo "value='$invThumbnail'";}?> required>
-                    <!-- value="/images/no-image.jpg" -->
+                    <input type="text" name="invThumbnail" id="thumbnailfile" <?php if (isset($invThumbnail)){echo "value='$invThumbnail'";}elseif(isset($invInfo['invThumbnail'])) {echo "value='$invInfo[invThumbnail]'"; }
+                    ?> required>
+                    <!-- value="/cse340/phpmotors/images/vehicles/no-image.jpg" -->
 
 
                     <label>Price</label>
