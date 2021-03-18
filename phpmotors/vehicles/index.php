@@ -211,10 +211,12 @@ switch ($action) {
   case 'classification':
     $classificationName = filter_input(INPUT_GET, 'classificationName', FILTER_SANITIZE_STRING);
     $vehicles = getVehiclesByClassification($classificationName);
+   
     if(!count($vehicles)){
      $message = "<p class='notice'>Sorry, no $classificationName could be found.</p>";
     } else {
      $vehicleDisplay = buildVehiclesDisplay($vehicles);
+     
     }
     
     include '../view/classification.php';
@@ -223,12 +225,14 @@ switch ($action) {
   case 'pullVehicleData':
     $vehicleId = filter_input(INPUT_GET, 'vehicleId', FILTER_SANITIZE_NUMBER_INT);
     $invInfo = getInvItemInfo($vehicleId);
+    $thumbnails = getVehicleThumbnails($vehicleId);
     $_SESSION['message'] = null;
     if (!$invInfo) {
             $_SESSION['message'] = 'Sorry, no vehicle information could be found.';
         }
     else {
         $vehicle = vehicleDetailPage($invInfo);
+        $thumbnailsDisplay = ThumbnailsDisplay($thumbnails);    
     }
     include '../view/vehicle-detail.php';
   break;

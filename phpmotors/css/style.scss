@@ -31,6 +31,130 @@ body {
     }
 
 
+    //image-upload
+    .image-upload {
+      .container-images {
+        display: block;
+        width: 50%;
+
+        p {
+          margin: 0;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+
+          fieldset {
+
+            border: none;
+            margin: 0 10px 0 -12px;
+
+
+            label {
+              padding: 0;
+              margin: 0 10px 0 0;
+            }
+
+            div {
+              input {
+                padding: 6px 8px;
+                margin: 10px 0;
+                border: none;
+                color: white;
+                background-color: black;
+              }
+            }
+
+          }
+        }
+
+      }
+
+      #image-display {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 10%;
+          list-style-type: none;
+          border: black solid 1px;
+          padding: 1%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          word-wrap: break-word;
+
+          img {
+            width: 100%;
+          }
+
+          p {
+
+
+
+            a {
+
+              text-decoration: none;
+              color: red;
+            }
+
+          }
+        }
+      }
+    }
+
+    //detail Container
+    .detail-container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      //inv-display-details
+      .vehicle-details {
+        width: 50%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+
+      #thumbnails {
+        h3 {
+          display: none;
+        }
+
+        ul {
+          padding: 0;
+
+          li {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+
+            img {
+              margin: 5px 0px;
+              width: 70%;
+            }
+
+            img:hover {
+              transform: scale(1.25);
+              transition: transform .8s ease-in-out;
+              cursor: pointer;
+
+            }
+          }
+        }
+
+        padding: 0;
+      }
+
+    }
+
     //navigation
     nav {
       ul {
@@ -185,14 +309,6 @@ body {
       }
     }
 
-    //inv-display-details
-    .vehicle-details {
-      width: 50%;
-
-      img {
-        width: 100%;
-      }
-    }
 
     //button
     .button {
@@ -365,12 +481,100 @@ body {
 
       }
 
-      //inv-display-details
-      .vehicle-details {
-        width: 100%;
 
-        img {
+      //details-container
+      .detail-container {
+        display: block;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        //inv-display-details
+        .vehicle-details {
           width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        #thumbnails {
+          h3 {
+            display: block;
+          }
+
+          ul {
+            li {
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+        }
+      }
+
+      //image-upload
+      .image-upload {
+        .container-images {
+          display: block;
+          width: 100%;
+
+          p {
+            margin: 0;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+
+            fieldset {
+
+              border: none;
+              margin: 0 10px 0 -12px;
+
+
+              label {
+                padding: 0;
+                margin: 0 10px 0 0;
+              }
+
+              div {
+                input {
+                  padding: 6px 8px;
+                  margin: 10px 0;
+                  border: none;
+                  color: white;
+                  background-color: black;
+                }
+              }
+
+            }
+          }
+
+        }
+
+        #image-display {
+          margin: 0;
+          padding: 0;
+          flex-direction: column;
+          width: 100%;
+
+          li {
+            list-style-type: none;
+            width: 100%;
+
+
+
+            p {
+
+
+              a {
+
+                color: black;
+              }
+            }
+
+          }
         }
       }
 

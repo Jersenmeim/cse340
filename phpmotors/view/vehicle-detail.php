@@ -19,9 +19,18 @@
             ?>
         </nav>
       
-       
+            <div class="detail-container">
             <?php echo $vehicle; ?>
-       
+                <div id="thumbnails">
+                    <?php 
+                    if(isset($thumbnailsDisplay)){
+                    echo $thumbnailsDisplay;
+                    } 
+                    ?>
+                </div>
+            </div>
+            
+
 
         <?php    
         include 'footer.php';

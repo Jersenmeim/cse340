@@ -33,6 +33,138 @@ body .bg .newClassName {
   display: block;
 }
 
+body .bg .image-upload .container-images {
+  display: block;
+  width: 50%;
+}
+
+body .bg .image-upload .container-images p {
+  margin: 0;
+}
+
+body .bg .image-upload .container-images form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .bg .image-upload .container-images form fieldset {
+  border: none;
+  margin: 0 10px 0 -12px;
+}
+
+body .bg .image-upload .container-images form fieldset label {
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+body .bg .image-upload .container-images form fieldset div input {
+  padding: 6px 8px;
+  margin: 10px 0;
+  border: none;
+  color: white;
+  background-color: black;
+}
+
+body .bg .image-upload #image-display {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .bg .image-upload #image-display li {
+  width: 10%;
+  list-style-type: none;
+  border: black solid 1px;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-wrap: break-word;
+}
+
+body .bg .image-upload #image-display li img {
+  width: 100%;
+}
+
+body .bg .image-upload #image-display li p a {
+  text-decoration: none;
+  color: red;
+}
+
+body .bg .detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .bg .detail-container .vehicle-details {
+  width: 50%;
+}
+
+body .bg .detail-container .vehicle-details img {
+  width: 100%;
+}
+
+body .bg .detail-container #thumbnails {
+  padding: 0;
+}
+
+body .bg .detail-container #thumbnails h3 {
+  display: none;
+}
+
+body .bg .detail-container #thumbnails ul {
+  padding: 0;
+}
+
+body .bg .detail-container #thumbnails ul li {
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .bg .detail-container #thumbnails ul li img {
+  margin: 5px 0px;
+  width: 70%;
+}
+
+body .bg .detail-container #thumbnails ul li img:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+  cursor: pointer;
+}
+
 body .bg nav ul {
   background-color: #3a3a3a;
   text-align: left;
@@ -173,14 +305,6 @@ body .bg #inv-display li div img {
 
 body .bg #inv-display li .container {
   padding: 2px 16px;
-}
-
-body .bg .vehicle-details {
-  width: 50%;
-}
-
-body .bg .vehicle-details img {
-  width: 100%;
 }
 
 body .bg .button {
@@ -339,11 +463,74 @@ body .bg footer p {
     margin: 2px -1px;
     display: table;
   }
-  body .bg .vehicle-details {
+  body .bg .detail-container {
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body .bg .detail-container .vehicle-details {
     width: 100%;
   }
-  body .bg .vehicle-details img {
+  body .bg .detail-container .vehicle-details img {
     width: 100%;
+  }
+  body .bg .detail-container #thumbnails h3 {
+    display: block;
+  }
+  body .bg .detail-container #thumbnails ul li img {
+    width: 100%;
+  }
+  body .bg .image-upload .container-images {
+    display: block;
+    width: 100%;
+  }
+  body .bg .image-upload .container-images p {
+    margin: 0;
+  }
+  body .bg .image-upload .container-images form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .bg .image-upload .container-images form fieldset {
+    border: none;
+    margin: 0 10px 0 -12px;
+  }
+  body .bg .image-upload .container-images form fieldset label {
+    padding: 0;
+    margin: 0 10px 0 0;
+  }
+  body .bg .image-upload .container-images form fieldset div input {
+    padding: 6px 8px;
+    margin: 10px 0;
+    border: none;
+    color: white;
+    background-color: black;
+  }
+  body .bg .image-upload #image-display {
+    margin: 0;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body .bg .image-upload #image-display li {
+    list-style-type: none;
+    width: 100%;
+  }
+  body .bg .image-upload #image-display li p a {
+    color: black;
   }
   body .bg form .container {
     width: 100%;
