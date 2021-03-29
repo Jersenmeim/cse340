@@ -20,7 +20,7 @@
         </nav>
       
             <div class="detail-container">
-            <?php echo $vehicle; ?>
+            <?php echo $vehicleDisplay; ?>
                 <div id="thumbnails">
                     <?php 
                     if(isset($thumbnailsDisplay)){
@@ -29,6 +29,27 @@
                     ?>
                 </div>
             </div>
+            
+            <div class="review-container">
+            <h3>Customer Reviews</h3>
+                <?php
+                if (isset($message2)) {
+                    echo $message2; 
+                } 
+
+             
+                
+                if (isset($reviewsDisplay)) {
+                    echo $reviewsDisplay;                     
+                } 
+
+                if (isset($reviewForm)) {
+                    echo $reviewForm; 
+                } 
+                ?>
+
+            </div>
+           
             
 
 

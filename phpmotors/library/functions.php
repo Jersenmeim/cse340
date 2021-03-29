@@ -66,7 +66,23 @@
       $dv .= '</ul>';
       return $dv;
    }
+   function formatDollars($number){
+      return '$'. number_format($number, 2, '.', ',');
+  }
 
+   function buildVehicleDisplay($vehicle){    
+    $dv = "<div>";
+    $dv .= "<img src='$vehicle[imgPath]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
+    $dv .= "<div class='details'>";
+    $dv .= "<p class='price'>Price: ". formatDollars($vehicle['invPrice']) ."</p>";
+    $dv .= "<h3>$vehicle[invMake] $vehicle[invModel] Details</h3>";
+    $dv .= "<p class='desc'>$vehicle[invDescription]</p>";    
+    $dv .= "<p class='det'>Color: $vehicle[invColor]</p>";
+    $dv .= "<p class='det'># in Stock: $vehicle[invStock]</p>";
+    $dv .= "</div>";
+    $dv .= "</div>";
+    return $dv;
+}
  
 
 
@@ -252,4 +268,49 @@
       // Free any memory associated with the old image
       imagedestroy($old_image);
       } // ends resizeImage function
+
+      //Build a list of vehicles with review by client
+      function buildClientReviewsList($reviews){    
+         $reviewsList = '<ul>';
+         foreach ($reviews as $review) {
+         $reviewsList .= "<li> $review[invMake] $review[invModel] (Reviewed on " . date('F j, Y', strtotime($review['reviewDate'])) . "): ";
+         $reviewsList .= "<a href='/cse340/phpmotors/reviews?action=modi&reviewId=".urlencode($review['reviewId']) . "' title='Click to edit'>Edit </a>";
+         $reviewsList .= "  | <a href='/cse340/phpmotors/reviews?action=dele&reviewId=".urlencode($review['reviewId']) . "' title='Click to delete'>Delete</a>";
+         $reviewsList .= '</li>';    
+         }
+         $reviewsList .= '</ul>';
+         return $reviewsList;
+      }
+
+      //Build a vehicle reviews list
+      function buildVehicleReviewsList($reviews){   
+         $reviewsList = '<ul id="reviews">';
+         foreach ($reviews as $review) {
+         $reviewsList .= "<li class='container'>" . substr($review['clientFirstname'],0,1) ."$review[clientLastname] wrote on " . date('F j, Y', strtotime($review['reviewDate'])) . ": <span>";
+         $reviewsList .= $review['reviewText'];
+         $reviewsList .= '</span></li>';    
+         }
+         $reviewsList .= '</ul>';
+         return $reviewsList;
+      } 
+
+      function buildReviewForm($client,  $invInfo, $messageVeh){
+         $form = "<h4 class='form'>You want to add Reviews on  $invInfo[invMake] $invInfo[invModel]?</h4>";
+         if (isset($messageVeh)) {
+            $form .= $messageVeh;
+         } 
+         $form .= "<form id='add-rev' method='post' action='/cse340/phpmotors/reviews/'>";
+         $form .= "<label for='screen'>Screen Name: ";
+         $form .= "<input type='text' id='screen' name='screen' value = '" . substr($client['clientFirstname'],0,1) . "$client[clientLastname]' readonly></label>";
+         $form .= "<label for='reviewText'>Add Review:</label>";
+         $form .= "<textarea id='reviewText' name='reviewText' placeholder='Enter Review'  required></textarea>";
+         $form .= "<input type='hidden' name='action' value='addReview'>";
+         $form .= "<input type='submit' name='submit' value='Submit Review' class='submitt' id='rev'>";
+         $form .= "<input type='hidden' name='invId' value='$invInfo[invId]'>";
+         $form .= "<input type='hidden' name='clientId' value='$client[clientId]'>";
+         $form .= "</form>";
+         return $form;
+      }
+
+
 ?>

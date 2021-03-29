@@ -9,6 +9,9 @@ require_once '../library/connections.php';
 require_once '../model/main-model.php';
 
 require_once '../model/vehicles-model.php';
+require_once '../model/reviews-model.php';
+require_once '../model/accounts-model.php';
+require_once '../model/uploads-model.php';
 // Get the functions library
 require_once '../library/functions.php';
 
@@ -226,14 +229,45 @@ switch ($action) {
     $vehicleId = filter_input(INPUT_GET, 'vehicleId', FILTER_SANITIZE_NUMBER_INT);
     $invInfo = getInvItemInfo($vehicleId);
     $thumbnails = getVehicleThumbnails($vehicleId);
+    $reviews = getReviewsByVehicle($vehicleId);
     $_SESSION['message'] = null;
-    if (!$invInfo) {
-            $_SESSION['message'] = 'Sorry, no vehicle information could be found.';
-        }
-    else {
-        $vehicle = vehicleDetailPage($invInfo);
-        $thumbnailsDisplay = ThumbnailsDisplay($thumbnails);    
+
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
+      $client = getClientInfo($_SESSION['clientData']['clientId']);
     }
+  
+
+    if(!count($invInfo)){
+      $message = "<p class='msg'>Sorry, no information could be found.</p>";
+    }
+    else {
+      $vehicleDisplay = buildVehicleDisplay($invInfo); 
+        $thumbnailsDisplay = ThumbnailsDisplay($thumbnails);    
+
+
+        if (!count($reviews)){
+          if(!isset($_SESSION['loggedin'])){
+            $message2 = "<p class='note'>There are no reviews for this vehicle yet. <a href='/cse340/phpmotors/accounts/index.php?action=login-form' title='Login to account'>Login</a> and be the first to write a review.</p>";
+          } else {
+            $message2 = "<p class='note'>There are no reviews for this vehicle yet. Be the first to write a review." ;                    
+            $reviewForm = buildReviewForm($client,$invInfo, null);
+          }
+        } 
+        
+        else {
+          if(!isset($_SESSION['loggedin'])){
+            $message2 = "<p class='note'>You must <a href='/cse340/phpmotors/accounts/index.php?action=login-form' title='Login to account'>login</a> to write a review." ;
+            $reviewsDisplay = buildVehicleReviewsList($reviews);  
+          } 
+          else {
+          $reviewForm = buildReviewForm($client, $invInfo, null);
+          $reviewsDisplay = buildVehicleReviewsList($reviews);
+          }
+        }      
+    }
+
+
+
     include '../view/vehicle-detail.php';
   break;
 
@@ -253,5 +287,7 @@ switch ($action) {
     else {header('Location: /cse340/phpmotors');
     }
   break;
+  
 }
+
 ?>

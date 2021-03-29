@@ -1,5 +1,17 @@
 <?php
   require_once '../model/accounts-model.php';
+
+    // Get client data based on an email address
+    function getClient($clientEmail){
+      $db = phpmotorsConnect();
+      $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword FROM clients WHERE clientEmail = :clientEmail';
+      $stmt = $db->prepare($sql);
+      $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
+      $stmt->execute();
+      $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+      $stmt->closeCursor();
+      return $clientData;
+    }
   function regClient($clientFirstname, $clientLastname, $clientEmail, $clientPassword){
       // Create a connection object using the phpmotors connection function
       $db = phpmotorsConnect();
@@ -45,17 +57,7 @@
       }
   }
 
-  // Get client data based on an email address
-  function getClient($clientEmail){
-    $db = phpmotorsConnect();
-    $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword FROM clients WHERE clientEmail = :clientEmail';
-    $stmt = $db->prepare($sql);
-    $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
-    $stmt->execute();
-    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    return $clientData;
-  }
+
 
   function updateClient($clientFirstname, $clientLastname, $clientEmail, $clientId) {
     $db = phpmotorsConnect();
@@ -90,5 +92,17 @@
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
     return $rowsChanged;
+  }
+
+    // Get client data based on an email address
+  function getClientInfo($clientId){
+    $db = phpmotorsConnect();
+    $sql = 'SELECT * FROM clients WHERE clientId = :clientId';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
+    $stmt->execute();
+    $clientInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $clientInfo;
   }
 ?>

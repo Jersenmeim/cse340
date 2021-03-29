@@ -8,6 +8,7 @@
     require_once '../model/main-model.php';
      // Get the PHP Motors Account model for use as needed
     require_once '../model/accounts-model.php';
+    require_once '../model/reviews-model.php';
     // Get the functions library
     require_once '../library/functions.php';
 
@@ -114,16 +115,25 @@
         array_pop($clientData);
         // Store the array into the session
         $_SESSION['clientData'] = $clientData;
+
+        $clientId =  $_SESSION['clientData']['clientId'];
+        $reviews = getReviewsByClient($clientId);
+        if(!count($reviews)){
+            $_SESSION['message-rev'] = "Sorry. You haven't written any reviews.";
+        } else {
+            $reviewsList = buildClientReviewsList($reviews);
+            $_SESSION['reviewsList'] = $reviewsList;
+        }
         // Send them to the admin view
-        header('location:/cse340/phpmotors/');
+        include '../view/admin.php';
         exit;
     break;
 
 
     case 'admin':
         include '../view/admin.php';
-        break;
-        case 'Logout':
+    break;
+    case 'Logout':
         //destroy session
         $_SESSION = array();
         session_destroy();
@@ -197,7 +207,7 @@
         }
 
         default:
-        include '../view/login.php';
+        include '../view/admin.php';
     break;
     }
 ?>

@@ -33,6 +33,15 @@ body .bg .newClassName {
   display: block;
 }
 
+body .bg .admin ul {
+  padding: 0;
+}
+
+body .bg .admin ul li {
+  margin: 0;
+  list-style-type: none;
+}
+
 body .bg .image-upload .container-images {
   display: block;
   width: 50%;
@@ -119,6 +128,10 @@ body .bg .detail-container {
           justify-content: flex-end;
 }
 
+body .bg .detail-container div img {
+  width: 50%;
+}
+
 body .bg .detail-container .vehicle-details {
   width: 50%;
 }
@@ -162,6 +175,114 @@ body .bg .detail-container #thumbnails ul li img:hover {
   transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
   transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+  cursor: pointer;
+}
+
+body .bg .review-container {
+  padding: 0%;
+  margin: 0%;
+  margin: auto;
+  display: block;
+  width: 68.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .bg .review-container .form-msg {
+  color: red;
+}
+
+body .bg .review-container h3,
+body .bg .review-container h4 {
+  margin: 0;
+}
+
+body .bg .review-container h3 {
+  color: #691f1f;
+}
+
+body .bg .review-container h4 {
+  color: #691f1f;
+}
+
+body .bg .review-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+body .bg .review-container form input {
+  border: none;
+  width: 40%;
+  margin: 0px 0;
+}
+
+body .bg .review-container form textarea {
+  margin: 10px 0;
+  height: 100px;
+}
+
+body .bg .review-container form .submitt {
+  padding: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+body .bg .review-container #reviews {
+  margin: 10px 0;
+  padding: 0;
+}
+
+body .bg .review-container #reviews .form {
+  color: blue;
+}
+
+body .bg .review-container #reviews li {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+body .bg .review-container #reviews li span {
+  font-style: italic;
+  font-weight: normal;
+}
+
+body .bg .update-reviews form,
+body .bg .delete-reviews form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+}
+
+body .bg .update-reviews form textarea,
+body .bg .delete-reviews form textarea {
+  height: 100px;
+}
+
+body .bg .update-reviews form .submitt,
+body .bg .delete-reviews form .submitt {
+  border: none;
+  width: 40%;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: black;
+  color: white;
   cursor: pointer;
 }
 
@@ -473,6 +594,9 @@ body .bg footer p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  body .bg .detail-container div img {
+    width: 100%;
+  }
   body .bg .detail-container .vehicle-details {
     width: 100%;
   }
@@ -483,7 +607,78 @@ body .bg footer p {
     display: block;
   }
   body .bg .detail-container #thumbnails ul li img {
+    margin-right: auto;
+    width: 70%;
+  }
+  body .bg .review-container {
+    padding: 0%;
+    margin: 0%;
+    margin: auto;
+    display: block;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .bg .review-container h3,
+  body .bg .review-container h4 {
+    margin: 0;
+  }
+  body .bg .review-container h3 {
+    color: #691f1f;
+  }
+  body .bg .review-container h4 {
+    font-style: italic;
+  }
+  body .bg .review-container form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body .bg .review-container form input {
+    border: none;
+    width: 40%;
+  }
+  body .bg .review-container form .submitt {
+    padding: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  body .bg .update-reviews form,
+  body .bg .delete-reviews form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body .bg .update-reviews form textarea,
+  body .bg .delete-reviews form textarea {
+    height: 100px;
+  }
+  body .bg .update-reviews form .submitt,
+  body .bg .delete-reviews form .submitt {
+    border: none;
+    width: 40%;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
   }
   body .bg .image-upload .container-images {
     display: block;

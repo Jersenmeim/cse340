@@ -1,11 +1,7 @@
 <?php
-    if(isset($_SESSION['loggedin'])){
-        if ($_SESSION['loggedin'] === TRUE) {
-
-        }
-    } 
-        else {header('Location: /cse340/phpmotors');
-    }
+if(!$_SESSION['loggedin']){
+    header('Location: /cse340/phpmotors/');
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +25,7 @@
             ?>
         </nav>
         <div class="admin">
+        <!-- <p>You are logged in.</p>   -->
             <h2><?php echo $_SESSION['clientData']['clientFirstname']; ?></h2>
             
             <ul>
@@ -45,9 +42,22 @@
             <?php if ($_SESSION['clientData']['clientLevel'] > 1) {echo '<h3>Inventory Management</h3>
                                                             <p>Use this link to manage the inventory.</p>
                                                             <p><a href="/cse340/phpmotors/vehicles">Vehicle Management</a></p>';} ?> 
+             <h3>Manage Your Product Reviews</h3>
+             <div>
+             <?php
+                if (isset($_SESSION['message-rev'])) { ?>
+                    <p class ="msg"> <?php  echo $_SESSION['message-rev']; ?> </p>
+                <?php } ?>
+                <!-- unset($_SESSION['message-rev']); ?> -->
+                <?php 
+                if(isset($_SESSION['reviewsList'])){
+                    echo $_SESSION['reviewsList'];
+                }
+                ?>
 
-
-            <p>You are logged in.</p>  
+           
+             </div>
+            
         </div>
       
         <?php    

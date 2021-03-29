@@ -31,6 +31,18 @@ body {
     }
 
 
+    .admin {
+      ul {
+        padding: 0;
+
+        li {
+          margin: 0;
+          list-style-type: none;
+        }
+      }
+    }
+
+
     //image-upload
     .image-upload {
       .container-images {
@@ -112,9 +124,18 @@ body {
       flex-direction: row-reverse;
       justify-content: flex-end;
 
+      div {
+
+
+        img {
+          width: 50%;
+        }
+      }
+
       //inv-display-details
       .vehicle-details {
         width: 50%;
+
 
         img {
           width: 100%;
@@ -153,6 +174,104 @@ body {
         padding: 0;
       }
 
+    }
+
+    //Reviews
+
+    .review-container {
+      padding: 0%;
+      margin: 0%;
+      margin: auto;
+      display: block;
+      width: 68.5%;
+      display: flex;
+      flex-direction: column;
+
+
+      .form-msg {
+        color: red;
+      }
+
+      h3,
+      h4 {
+        margin: 0;
+      }
+
+      h3 {
+        color: rgb(105, 31, 31);
+      }
+
+      h4 {
+
+        color: #691f1f;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+        input {
+          border: none;
+          width: 40%;
+          margin: 0px 0;
+        }
+
+        textarea {
+          margin: 10px 0;
+          height: 100px;
+        }
+
+        .submitt {
+          padding: 8px;
+          background-color: black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      #reviews {
+        margin: 10px 0;
+        padding: 0;
+
+        .form {
+          color: blue;
+        }
+
+        li {
+          list-style-type: none;
+          font-weight: bold;
+
+          span {
+            font-style: italic;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .update-reviews,
+    .delete-reviews {
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        textarea {
+          height: 100px;
+        }
+
+        .submitt {
+          border: none;
+          width: 40%;
+          margin: 10px 0;
+          padding: 8px;
+          background-color: black;
+          color: white;
+          cursor: pointer;
+
+        }
+      }
     }
 
     //navigation
@@ -488,6 +607,14 @@ body {
         flex-direction: row-reverse;
         justify-content: flex-end;
 
+        div {
+
+
+          img {
+            width: 100%;
+          }
+        }
+
         //inv-display-details
         .vehicle-details {
           width: 100%;
@@ -505,11 +632,80 @@ body {
           ul {
             li {
               img {
-                width: 100%;
+                margin-right: auto;
+                width: 70%;
               }
             }
           }
 
+        }
+      }
+
+
+      .review-container {
+        padding: 0%;
+        margin: 0%;
+        margin: auto;
+        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h3,
+        h4 {
+          margin: 0;
+        }
+
+        h3 {
+          color: rgb(105, 31, 31);
+        }
+
+        h4 {
+          font-style: italic;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          input {
+            border: none;
+            width: 40%;
+
+          }
+
+          .submitt {
+            padding: 8px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .update-reviews,
+      .delete-reviews {
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          textarea {
+            height: 100px;
+          }
+
+          .submitt {
+            border: none;
+            width: 40%;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+
+          }
         }
       }
 
